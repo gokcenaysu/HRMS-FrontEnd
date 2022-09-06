@@ -6,8 +6,6 @@ import { Table, TableBody, TableCell, TableRow, TableHead } from '@mui/material'
 import Paper from '@mui/material/Paper';
 import TableContainer from '@mui/material/TableContainer';
 
-
-
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'description', headerName: 'Description', width: 100 },
