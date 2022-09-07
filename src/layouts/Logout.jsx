@@ -1,11 +1,16 @@
-import React from 'react'
-import Button from '@mui/material/Button';
+import React from "react";
+import Button from "@mui/material/Button";
 
-export default function Logout() {
+function Logout({login}){
   return (
     <div>
-        <Button variant="contained">Login</Button>
-        <Button variant="contained">Register</Button>
+      <Button onClick={login} style={{ backgroundColor: 'pink', marginRight:"10px" }} variant="contained">
+        Login
+      </Button>
+      <Button style={{ backgroundColor: 'pink' }} variant="contained">
+        Register
+      </Button>
     </div>
-  )
-}
+  );
+  }
+export default Logout;

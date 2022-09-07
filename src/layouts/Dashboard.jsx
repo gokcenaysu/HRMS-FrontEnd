@@ -1,10 +1,16 @@
 import React from 'react'
 import AdvertisementList from "../pages/AdvertisementList"
+import { Route, Routes } from 'react-router-dom'
+import AdvertisementDetail from '../pages/AdvertisementDetail';
 
-export default function Dashboard() {
+function Dashboard() {
   return (
     <div>
-      <AdvertisementList/>
+      <Routes>
+      <Route path='/advertisement' element={<AdvertisementList/>}/>
+      <Route path='/advertisement/:id' element={<AdvertisementDetail/>}/>
+      </Routes>
      </div>
   )
 }
+export default Dashboard;
