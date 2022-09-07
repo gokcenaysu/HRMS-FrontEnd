@@ -7,18 +7,17 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import EmployerService from '../services/employerService';
+import PositionService from '../services/positionService';
 import { NavLink } from "react-router-dom";
 
-
 export default function PositionTable() {
-    const [employers, setEmployers] = useState([]);
+    const [positions, setPositions] = useState([]);
   
     useEffect(() => {
-      let employerService = new EmployerService();
-      employerService
-        .getEmployers()
-        .then((result) => setEmployers(result.data.data));
+      let positionService = new PositionService();
+      positionService
+        .getPositions()
+        .then((result) => setPositions(result.data.data));
     }, []);
 
   return (
@@ -26,19 +25,19 @@ export default function PositionTable() {
       <Table sx={{ minWidth: 150 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Companies</TableCell>
+            <TableCell>Positions</TableCell>
            
           </TableRow>
         </TableHead>
         <TableBody>
-          {employers.map((employer) => (
+          {positions.map((position) => (
             <TableRow
-              key={employer.id}
+              key={position.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" as={NavLink}
-      to={`/employers/${employer.employer}`}>
-                {employer.website}
+      to={`/positions/${position.position}`}>
+                {position.position}
               </TableCell>
             </TableRow>
           ))}

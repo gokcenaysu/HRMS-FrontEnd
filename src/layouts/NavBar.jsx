@@ -13,6 +13,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import Logout from "./Logout";
 import Login from "./Login";
 import { NavLink } from "react-router-dom";
+import { useNavigate} from 'react-router-dom'
 
 const pages = ["Products", "Pricing", "Blog"];
 
@@ -28,9 +29,11 @@ const NavBar = () => {
   };
 
   const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const navigate = useNavigate()
 
   const handleLogout = (params) => {
     setIsAuthenticated(false);
+    navigate('/')
   };
 
   const handleLogin = (params) => {

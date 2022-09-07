@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useParams } from 'react-router-dom';
 
-function AdvertisementDetail() {
+function PositionDetail() {
   let {name} =useParams();
   return (
     <div>
@@ -29,4 +29,4 @@ function AdvertisementDetail() {
     </div>
   )
 }
-export default AdvertisementDetail;
+export default PositionDetail;

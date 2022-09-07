@@ -6,10 +6,11 @@ import NavBar from '../src/layouts/NavBar'
 function App() {
   return (
     <div className="App">
+
       <NavBar/>
-  
+  <Container>
         <Dashboard className="main"/>
-        
+        </Container>
     </div>
   );
 }
