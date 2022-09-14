@@ -1,10 +1,10 @@
 import React from 'react'
-import AdvertisementList from "../pages/AdvertisementList"
-import PositionList from '../pages/PositionList'
+import AdvertisementList from "../../pages/AdvertisementList"
+import PositionList from '../../pages/PositionList'
 import { Route, Routes } from 'react-router-dom'
-import AdvertisementDetail from '../pages/AdvertisementDetail';
-import PositionDetail from '../pages/PositionDetail';
-import EmployerList from '../pages/EmployerList'
+import AdvertisementDetail from '../../pages/AdvertisementDetail';
+import PositionDetail from '../../pages/PositionDetail';
+import EmployerList from '../../pages/EmployerList'
 
 function Dashboard() {
   return (

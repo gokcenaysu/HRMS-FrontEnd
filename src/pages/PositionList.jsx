@@ -16,7 +16,7 @@ export default function PositionTable() {
     useEffect(() => {
       let positionService = new PositionService();
       positionService
-        .getPositions()
+        .getPosition()
         .then((result) => setPositions(result.data.data));
     }, []);
 
@@ -37,7 +37,7 @@ export default function PositionTable() {
             >
               <TableCell component="th" as={NavLink}
       to={`/positions/${position.position}`}>
-                {position.position}
+                {position.name}
               </TableCell>
             </TableRow>
           ))}

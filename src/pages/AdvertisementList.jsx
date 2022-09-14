@@ -36,12 +36,12 @@ const AdvertisementTable = () => {
   useEffect(() => {
     let advertisementService = new AdvertisementService();
     advertisementService
-      .getAdvertisements()
+      .getAdvertisement()
       .then((result) => setAdvertisements(result.data.data));
 
     let positionService = new PositionService();
     positionService
-      .getPositions()
+      .getPosition()
       .then((result) => setPositions(result.data.data));
   }, []);
 
